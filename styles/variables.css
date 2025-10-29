@@ -2,3 +2,21 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --accent-color: #ff0070;
+  --accent-color-secondary: #db00ff;
+  --accent-color-for-title: #ff0070;
+  --nav-color: #ff0070;
+  --nav-color-corner: #ff0070;
+  --nav-color-hover: rgba(255, 0, 112, 0.4);
+  --title-color: #000028;
+  --bg-color:#000028;
+  --accent-color-text-secondary: #f1b2ce;
+  --accent-bg-image: url(../images/cover-image.png);
+  --accent-size: 18px;
+  --accent-font-weight: 400;
+  --accent-font-weight-secondary: 700;
+  --accent-line-height: 23.4px;
+  --title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --accent-bg-image: url(../images/cover-image.png);
+}
