@@ -3,7 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--accent-bg-image);
-  background-color: var(--accent-bg-image);
+  background-color: var(--bg-color);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -57,7 +57,7 @@
   content: "";
   position: absolute;
   right: -20px;
-  top: 7px;
+  top: 8px;
   width: 9px;
   height: 9px;
   border-radius: 50%;
@@ -72,7 +72,7 @@
 }
 
 .header__theme-menu-list {
-  gap: 21px;
+  gap: 10px;
   display: flex;
   justify-content: center;
   list-style: none;
@@ -82,12 +82,11 @@
   text-transform: lowercase;
   font-size: var(--accent-size);
   font-weight: var(--accent-font-weight);
-  line-height: var(--accent-size);
   background-color: transparent;
   border-color: transparent;
   color: var(--accent-color-for-title);
   border: 1px solid transparent;
-  padding: 2px 13px;
+  padding: 3px 13px;
   cursor: pointer;
   appearance: none;
   line-height: 1;
@@ -129,11 +128,15 @@
 .title-decor {
   background-color: var(--accent-color);
   color: var(--title-color);
+  line-height: 23.4px;
 }
 
 .main {
   padding-left: 20px;
   padding-right: 20px;
+  margin-bottom: 60px;
+}
+.section__content {
   margin-bottom: 80px;
 }
 
@@ -239,10 +242,11 @@
 }
 
 .footer {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   block-size: 100vh;
-  min-height: 668px;
+  min-height: 768px;
   position: relative;
   padding: 20px;
 }
@@ -269,26 +273,32 @@
   .content__question-title {
     width: 236px;
   }
+  .section__info {
+    grid-template-columns: 236px 1fr;
+  }
   .content__card-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .section__content-gallery {
-    padding-left: 20px;
-    padding-right: 20px;
+  .content__info-title {
+    margin-block-start: 0;
+  }
+  .title_limitation {
+    margin-block-start: 20px;
   }
 }
 
 @media (width <= 400px) {
   .header {
-    margin-bottom: 20px;
-    padding: 10px 10px 20px 10px;
+    padding: 10px;
+    min-height: 648px;
+    margin-bottom: 40px;
   }
   .main {
-    margin-bottom: 50px;
-    padding-right: 10px;
+    margin-bottom: 40px;
     padding-left: 10px;
+    padding-right: 10px;
   }
   .header__theme-menu {
     display: flex;
@@ -296,15 +306,39 @@
     align-self: center;
   }
   .header__title {
-    font-size: 116px;
+    font-size: var(--title);
     margin: 0;
   }
-  .footer__title {
-    font-size: 116px;
+  .decorated-zone::after {
+    top: 10px;
+    right: 10px;
   }
+
+  .decorated-zone::before {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .header__rec {
+    top: 10px;
+    right: 40px;
+  }
+
+  .header__rec::after {
+    right: -20px;
+    top: 8px;
+  }
+
   .header__content {
     width: 100%;
   }
+  .content__question-title {
+    width: 100%;
+  }
+  .section__content {
+    margin-bottom: 50px;
+  }
+
   .section__info {
     display: flex;
     flex-direction: row;
@@ -315,18 +349,20 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .section__content-gallery {
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-bottom: 20px;
-  }
+
   .gallery {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
   }
+  .content__pictures-title {
+    margin-bottom: 10px;
+  }
   .footer {
-    padding: 20px 10px 10px 10px;
+    min-height: 648px;
+  }
+  .footer__title {
+    font-size: var(--title);
   }
 }

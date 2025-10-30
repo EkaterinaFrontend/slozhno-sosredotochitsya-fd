@@ -10,7 +10,7 @@
   --nav-color-corner: #ff0070;
   --nav-color-hover: rgba(255, 0, 112, 0.4);
   --title-color: #000028;
-  --bg-color:#000028;
+  --bg-color: #000028;
   --accent-color-text-secondary: #f1b2ce;
   --accent-bg-image: url(../images/cover-image.png);
   --accent-size: 18px;
@@ -19,4 +19,9 @@
   --accent-line-height: 23.4px;
   --title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --accent-bg-image: url(../images/cover-image.png);
+}
+@media (width <= 400px) {
+  :root {
+    --title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
 }
