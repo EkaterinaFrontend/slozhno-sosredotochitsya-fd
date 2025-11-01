@@ -93,23 +93,25 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--nav-color);
+  border: 1px solid var(--nav-color-active);
   pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
   border: 1px solid var(--nav-color-hover);
 }
-
+.header__theme-menu-button:focus {
+  outline: none;
+}
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--menu-button-focus-visible);
 }
 
 .header__title {
   margin-left: -20px;
   position: relative;
   justify-self: start;
-  color: var(--accent-color-secondary);
+  color: var(--accent-color-header-footer);
   line-height: 83%;
   font-size: var(--title);
   text-shadow: 4px 4px 0 var(--accent-color);
@@ -121,7 +123,7 @@
 
 .header__content-text {
   line-height: var(--accent-line-height);
-  font-weight: var(--accent-font-weight-secondary);
+  font-weight: var(--accent-font-weight-bold);
   font-size: var(--accent-size);
 }
 
@@ -149,7 +151,7 @@
 .content__question-title {
   color: var(--accent-color-for-title);
   font-size: var(--accent-size);
-  font-weight: var(--accent-font-weight-secondary);
+  font-weight: var(--accent-font-weight-bold);
   line-height: var(--accent-line-height);
 }
 
@@ -177,7 +179,7 @@
   font-weight: var(--accent-font-weight);
   font-size: var(--accent-size);
   line-height: var(--accent-line-height);
-  color: var(--accent-color-text-secondary);
+  color: var(--accent-color-text);
 }
 
 .content__link {
@@ -188,7 +190,7 @@
 
 .content__link:hover {
   color: var(--accent-color-text);
-  border-bottom: 1px solid var(--accent-color-text-secondary);
+  border-bottom: 1px solid var(--accent-color-text);
 }
 
 .content__link:focus {
@@ -207,7 +209,7 @@
 
 .content__pictures-title {
   margin-bottom: 20px;
-  font-weight: var(--accent-font-weight-secondary);
+  font-weight: var(--accent-font-weight-bold);
   font-size: var(--accent-size);
   line-height: var(--accent-line-height);
 }
@@ -252,10 +254,10 @@
 }
 
 .footer__title {
-  font-weight: var(--accent-font-weight-secondary);
+  font-weight: var(--accent-font-weight-bold);
   font-size: var(--title);
   line-height: 83%;
-  color: var(--accent-color-secondary);
+  color: var(--accent-color-header-footer);
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
@@ -289,7 +291,7 @@
   }
 }
 
-@media (width <= 400px) {
+@media (width <= 600px) {
   .header {
     padding: 10px;
     min-height: 648px;
@@ -340,9 +342,7 @@
   }
 
   .section__info {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr;
   }
   .content__card-list {
     display: flex;
